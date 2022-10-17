@@ -1,6 +1,6 @@
-Dir.glob(File.join( '**', '*.rb'), base: 'lib').each do |file|
-  require file
-end
+# frozen_string_literal: true
+
+require_relative "mudraa/version"
 
 module Mudraa
   class Error < StandardError; end
