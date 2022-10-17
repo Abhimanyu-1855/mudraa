@@ -11,5 +11,5 @@ Gem::Specification.new do |spec|
   spec.summary = "Collection Party"
   spec.required_ruby_version = ">= 2.6.8"
   spec.files = Dir.glob(File.join('lib', '**', '*.rb'))
-
+  spec.add_dependency "activerecord"
 end

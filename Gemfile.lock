@@ -2,13 +2,29 @@ PATH
   remote: .
   specs:
     mudraa (0.1.0)
+      activerecord
 
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (6.1.7)
+      activesupport (= 6.1.7)
+    activerecord (6.1.7)
+      activemodel (= 6.1.7)
+      activesupport (= 6.1.7)
+    activesupport (6.1.7)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
     ast (2.4.2)
+    concurrent-ruby (1.1.10)
     diff-lcs (1.5.0)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
     json (2.6.2-java)
+    minitest (5.16.3)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
@@ -42,7 +58,10 @@ GEM
     rubocop-ast (1.21.0)
       parser (>= 3.1.1.0)
     ruby-progressbar (1.11.0)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
     unicode-display_width (2.3.0)
+    zeitwerk (2.6.1)
 
 PLATFORMS
   universal-java-16
