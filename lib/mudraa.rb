@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 
-Dir.glob(File.join( '**', '*.rb'), base: 'lib').each {|file| require file }
+require_relative "mudraa/version"
+require_relative "mudraa/models/collection_party"
+
+# Dir.glob(File.join( '**', '*.rb'), base: 'lib').each {|file| require file }
 
 module Mudraa
 end
