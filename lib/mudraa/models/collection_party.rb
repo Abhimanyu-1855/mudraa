@@ -6,7 +6,7 @@ module Mudraa
         end
 
         def self.query(shipment_id)
-          GetShipment.where(id: shipment_id)
+          GetShipment.run!(id: shipment_id)
         end
 
         def self.create_collection_party(create_params)
