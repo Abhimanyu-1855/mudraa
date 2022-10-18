@@ -5,7 +5,11 @@ module Mudraa
            return "world"
         end
 
-        def create_collection_party(create_params)
+        def self.query(shipment_id)
+          GetShipment.where(id: shipment_id)
+        end
+
+        def self.create_collection_party(create_params)
             collection_party = ShipmentCollectionParty.new(create_params, proforma_mappings)
 
             unless collection_party.save!
@@ -20,7 +24,7 @@ module Mudraa
             return { id: collection_party.id }
         end
 
-        def update_collection_party(update_params, proforma_mappings, status, performed_by_id, id)
+        def self.update_collection_party(update_params, proforma_mappings, status, performed_by_id, id)
             collection_party = ShipmentCollectionParty.where(id: id).take
 
             if proforma_mappings.present?
@@ -47,7 +51,7 @@ module Mudraa
               return { id: collection_party.id }
         end
 
-        def list_collection_party(shipment_mapping, query)
+        def self.list_collection_party(shipment_mapping, query)
             service_group = []
 
             shipment_mapping.uniq.each do |mapping|
